@@ -13,10 +13,10 @@ export function Bakery() {
     <section id="why-participate" data-theme="dark" aria-labelledby="why-title" className="relative py-28 text-cream md:py-40 bg-char/95 border-y border-cream/10">
       <div className="mx-auto max-w-6xl px-6">
         <SectionLabel index="04" label={WHY_PARTICIPATE.label} className="text-saffron" />
-        <RevealText id="why-title" text={WHY_PARTICIPATE.title} className="mt-6 max-w-3xl font-serif text-5xl leading-none md:text-7xl" />
-        <p className="mt-6 max-w-xl text-pretty text-lg text-cream/75">{WHY_PARTICIPATE.description}</p>
+        <RevealText id="why-title" text={WHY_PARTICIPATE.title} className="mt-6 max-w-3xl font-serif text-3xl sm:text-5xl leading-none md:text-7xl" />
+        <p className="mt-4 max-w-xl text-pretty text-base sm:text-lg text-cream/75">{WHY_PARTICIPATE.description}</p>
 
-        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="mt-12 grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-5">
           {WHY_PARTICIPATE.steps.map((step, i) => {
             const Icon = STEP_ICONS[i]
             return (
@@ -26,7 +26,7 @@ export function Bakery() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-cream/15 bg-cream/[0.04] p-6 backdrop-blur transition-all duration-300 hover:border-saffron/50 hover:bg-cream/[0.08]"
+                className="group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-cream/15 bg-cream/[0.04] p-5 sm:p-6 backdrop-blur transition-all duration-300 hover:border-saffron/50 hover:bg-cream/[0.08]"
               >
                 <div>
                   <div className="flex items-center justify-between">

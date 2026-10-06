@@ -119,7 +119,7 @@ export function Navbar() {
                     target={link.href.startsWith('http') ? '_blank' : undefined}
                     rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                     onClick={() => setOpen(false)}
-                    className="flex items-baseline gap-4 py-1 font-serif text-5xl text-cream transition-colors hover:text-saffron"
+                    className="flex items-baseline gap-3 py-1 font-serif text-3xl sm:text-4xl md:text-5xl text-cream transition-colors hover:text-saffron"
                   >
                     <span className="font-mono text-xs text-saffron">{String(i + 1).padStart(2, '0')}</span>
                     {link.label}

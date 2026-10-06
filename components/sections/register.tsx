@@ -71,16 +71,16 @@ function RegisterCard() {
 
 export function Register() {
   return (
-    <section id="register" data-theme="dark" aria-labelledby="register-title" className="py-28 text-cream md:py-36">
-      <div className="mx-auto grid max-w-6xl gap-16 px-6 lg:grid-cols-2">
+    <section id="register" data-theme="dark" aria-labelledby="register-title" className="py-24 text-cream md:py-36">
+      <div className="mx-auto grid max-w-6xl gap-12 px-6 lg:grid-cols-2 lg:gap-16">
         <div id="faq" className="scroll-mt-24">
           <SectionLabel index="11" label={FAQ.label} className="text-saffron" />
-          <RevealText text={FAQ.title} className="mt-6 font-serif text-5xl leading-none md:text-6xl" />
-          <Accordion className="mt-10">
+          <RevealText text={FAQ.title} className="mt-6 font-serif text-3xl sm:text-5xl leading-none md:text-6xl" />
+          <Accordion className="mt-8 sm:mt-10">
             {FAQ.items.map((item, i) => (
               <AccordionItem key={item.q} value={`faq-${i}`} className="border-cream/10">
-                <AccordionTrigger className={cn('py-5 text-left font-serif text-xl hover:no-underline md:text-2xl')}>{item.q}</AccordionTrigger>
-                <AccordionContent className="text-base leading-relaxed text-cream/75">{item.a}</AccordionContent>
+                <AccordionTrigger className={cn('py-4 sm:py-5 text-left font-serif text-lg sm:text-xl hover:no-underline md:text-2xl')}>{item.q}</AccordionTrigger>
+                <AccordionContent className="text-sm sm:text-base leading-relaxed text-cream/75">{item.a}</AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
@@ -88,8 +88,8 @@ export function Register() {
 
         <div>
           <SectionLabel index="12" label={REGISTER.label} className="text-saffron" />
-          <RevealText id="register-title" text={REGISTER.title} className="mt-6 font-serif text-5xl leading-none md:text-6xl" />
-          <p className="mb-8 mt-4 text-cream/75">{REGISTER.description}</p>
+          <RevealText id="register-title" text={REGISTER.title} className="mt-6 font-serif text-3xl sm:text-5xl leading-none md:text-6xl" />
+          <p className="mb-6 mt-4 text-sm sm:text-base text-cream/75">{REGISTER.description}</p>
           <RegisterCard />
         </div>
       </div>

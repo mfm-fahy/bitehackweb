@@ -21,7 +21,7 @@ function StepItem({ stage, index, active, onActive }: { stage: Stage; index: num
     <li ref={ref} className="flex min-h-[35vh] items-center lg:min-h-[55vh]">
       <div
         className={cn(
-          'w-full rounded-3xl border p-8 transition-all duration-500 md:p-10',
+          'w-full rounded-3xl border p-5 sm:p-8 md:p-10 transition-all duration-500',
           active ? 'border-saffron/60 bg-cream/[0.08] opacity-100 shadow-xl shadow-saffron/5' : 'border-cream/10 opacity-40',
         )}
       >
@@ -30,8 +30,8 @@ function StepItem({ stage, index, active, onActive }: { stage: Stage; index: num
           <span className="rounded-full bg-saffron/20 px-3 py-1 font-mono text-xs text-saffron">{stage.date}</span>
         </div>
         <span className="mt-3 inline-block font-mono text-xs font-semibold uppercase tracking-wider text-saffron">{stage.tag}</span>
-        <h3 className="mt-2 font-serif text-3xl md:text-4xl">{stage.title}</h3>
-        <p className="mt-4 max-w-md text-pretty text-base text-cream/80 leading-relaxed">{stage.description}</p>
+        <h3 className="mt-2 font-serif text-2xl sm:text-3xl md:text-4xl">{stage.title}</h3>
+        <p className="mt-4 max-w-md text-pretty text-sm sm:text-base text-cream/80 leading-relaxed">{stage.description}</p>
       </div>
     </li>
   )
@@ -43,11 +43,11 @@ export function HowItWorks() {
   const { scrollYProgress } = useScroll({ target: listRef, offset: ['start center', 'end center'] })
 
   return (
-    <section id="journey" data-theme="dark" aria-labelledby="journey-title" className="relative pb-20 pt-40 text-cream md:pt-56">
+    <section id="journey" data-theme="dark" aria-labelledby="journey-title" className="relative pb-20 pt-28 text-cream md:pt-40">
       <div className="mx-auto grid max-w-6xl gap-10 px-6 lg:grid-cols-[1fr_1.15fr] lg:gap-20">
         <div className="self-start lg:sticky lg:top-32">
           <SectionLabel index="07" label={JOURNEY.label} className="text-saffron" />
-          <RevealText id="journey-title" text={JOURNEY.title} className="mt-6 font-serif text-5xl leading-none md:text-7xl" />
+          <RevealText id="journey-title" text={JOURNEY.title} className="mt-6 font-serif text-3xl sm:text-5xl leading-none md:text-7xl" />
 
           <div aria-hidden className="mt-12 hidden items-end gap-6 lg:flex">
             <div className="relative h-40 w-24 overflow-hidden">

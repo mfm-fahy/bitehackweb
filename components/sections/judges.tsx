@@ -12,12 +12,12 @@ export function Judges() {
       <div className="mx-auto max-w-6xl px-6">
         <SectionLabel index="08" label={COORDINATORS.label} className="text-saffron" />
         <div className="mt-6 flex flex-col justify-between gap-4 md:flex-row md:items-end">
-          <RevealText id="coordinators-title" text={COORDINATORS.title} className="font-serif text-5xl leading-none md:text-7xl" />
-          <p className="max-w-md text-cream/75">{COORDINATORS.description}</p>
+          <RevealText id="coordinators-title" text={COORDINATORS.title} className="font-serif text-3xl sm:text-5xl leading-none md:text-7xl" />
+          <p className="max-w-md text-cream/75 text-sm sm:text-base">{COORDINATORS.description}</p>
         </div>
 
         {/* Executive Coordinators */}
-        <div className="mt-14">
+        <div className="mt-12">
           <h3 className="font-mono text-xs uppercase tracking-widest text-saffron mb-6 flex items-center gap-2">
             <UserCheck className="size-4" /> Executive Coordinators
           </h3>
@@ -29,7 +29,7 @@ export function Judges() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="flex flex-col justify-between rounded-3xl border border-cream/15 bg-cream/[0.04] p-8 backdrop-blur transition-all duration-300 hover:border-saffron/50 hover:bg-cream/[0.08]"
+                className="flex flex-col justify-between rounded-3xl border border-cream/15 bg-cream/[0.04] p-6 sm:p-8 backdrop-blur transition-all duration-300 hover:border-saffron/50 hover:bg-cream/[0.08]"
               >
                 <div>
                   <div className="flex items-center justify-between">

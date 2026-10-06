@@ -58,35 +58,48 @@ export function Hero() {
       <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-char/70 via-char/40 to-char" />
       <Steam />
 
-      <FloatingFood src={IMAGES.tomato} progress={scrollYProgress} distance={120} className="left-[2%] top-[18%] size-24 md:size-40" />
-      <FloatingFood src={IMAGES.chili} progress={scrollYProgress} distance={220} rotate={40} floatDelay={1.2} className="right-[4%] top-[14%] size-24 md:size-44" />
-      <FloatingFood src={IMAGES.herbs} progress={scrollYProgress} distance={160} floatDelay={2} className="bottom-[10%] right-[10%] hidden size-36 md:block" />
+      <FloatingFood src={IMAGES.tomato} progress={scrollYProgress} distance={120} className="left-[1%] top-[12%] size-16 sm:size-24 md:size-36 opacity-70 sm:opacity-100 pointer-events-none" />
+      <FloatingFood src={IMAGES.chili} progress={scrollYProgress} distance={220} rotate={40} floatDelay={1.2} className="right-[2%] top-[10%] size-16 sm:size-24 md:size-40 opacity-70 sm:opacity-100 pointer-events-none" />
+      <FloatingFood src={IMAGES.herbs} progress={scrollYProgress} distance={160} floatDelay={2} className="bottom-[10%] right-[6%] hidden size-36 md:block pointer-events-none" />
 
       <motion.div
         style={{ y: contentY, opacity: contentOpacity }}
-        className="relative mx-auto flex w-full max-w-7xl flex-col items-center px-6 pt-24 text-center"
+        className="relative mx-auto flex w-full max-w-7xl flex-col items-center px-4 sm:px-6 pt-28 pb-16 text-center z-10"
       >
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: INTRO_DELAY - 0.2, duration: 0.6 }}
-          className="mb-4 rounded-full border border-saffron/40 bg-saffron/15 px-5 py-2 font-mono text-xs uppercase tracking-[0.2em] text-saffron backdrop-blur md:text-sm"
+          className="mb-4 rounded-full border border-saffron/40 bg-saffron/15 px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.15em] text-saffron backdrop-blur sm:px-5 sm:py-2 sm:text-xs md:text-sm"
         >
           {EVENT.presenters}
         </motion.p>
 
-        <h1 id="hero-title" className="font-serif text-[15vw] font-bold leading-[0.85] tracking-tight text-cream md:text-[11vw] xl:text-[9.5rem]">
+        <h1 id="hero-title" className="font-serif text-4xl sm:text-7xl md:text-8xl lg:text-[9rem] font-extrabold leading-[0.9] tracking-tight text-cream flex flex-wrap justify-center items-center gap-x-3 sm:gap-x-5 py-2">
           <span className="sr-only">{EVENT.name}</span>
-          <span aria-hidden className="inline-flex overflow-hidden pb-[0.08em]">
-            {'BITEHACK 2026'.split('').map((char, i) => (
+          <span aria-hidden className="flex overflow-hidden pb-[0.05em]">
+            {'BITEHACK'.split('').map((char, i) => (
               <motion.span
-                key={i}
+                key={`b-${i}`}
                 initial={{ y: '105%' }}
                 animate={{ y: '0%' }}
                 transition={{ delay: INTRO_DELAY + i * 0.04, duration: 0.8, ease: EASE }}
-                className={i >= 8 ? 'inline-block italic text-saffron' : 'inline-block'}
+                className="inline-block"
               >
-                {char === ' ' ? '\u00A0' : char}
+                {char}
+              </motion.span>
+            ))}
+          </span>
+          <span aria-hidden className="flex overflow-hidden pb-[0.05em] text-saffron italic">
+            {'2026'.split('').map((char, i) => (
+              <motion.span
+                key={`y-${i}`}
+                initial={{ y: '105%' }}
+                animate={{ y: '0%' }}
+                transition={{ delay: INTRO_DELAY + 0.32 + i * 0.04, duration: 0.8, ease: EASE }}
+                className="inline-block"
+              >
+                {char}
               </motion.span>
             ))}
           </span>
@@ -96,12 +109,12 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: INTRO_DELAY + 0.4, duration: 0.7, ease: EASE }}
-          className="mt-4 inline-flex items-center gap-3 rounded-3xl border border-cream/20 bg-char/80 px-6 py-3 shadow-2xl backdrop-blur"
+          className="mt-4 flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 rounded-full border border-saffron/30 bg-char/90 px-4 py-2 sm:px-6 sm:py-3 shadow-2xl backdrop-blur-md max-w-[92vw]"
         >
-          <span className="relative size-10 overflow-hidden rounded-full border border-saffron/50 bg-white p-0.5 shadow-md">
+          <span className="relative size-8 sm:size-10 overflow-hidden rounded-full border border-saffron/50 bg-white p-0.5 shadow-md shrink-0">
             <Image src="/images/logo.png" alt="BITEHACK Logo Emblem" fill className="object-contain" />
           </span>
-          <span className="font-serif text-2xl font-bold tracking-wider text-saffron md:text-3xl">IDEA 2 PLATE</span>
+          <span className="font-serif text-xl sm:text-2xl md:text-3xl font-bold tracking-wider text-saffron">IDEA 2 PLATE</span>
           <span className="hidden text-cream/40 md:inline">|</span>
           <span className="hidden font-mono text-xs tracking-widest text-cream/80 md:inline">FROM IDEAS TO COMMERCIAL FOOD PRODUCTS</span>
         </motion.div>
@@ -110,11 +123,11 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: INTRO_DELAY + 0.55, duration: 0.8, ease: EASE }}
-          className="mt-6 max-w-3xl text-pretty font-serif text-lg text-cream/90 md:text-2xl"
+          className="mt-5 sm:mt-6 max-w-3xl text-pretty font-serif text-base sm:text-xl md:text-2xl text-cream/90 px-2"
         >
-          Dr. R Shivakumar Foundation & SRM Institute of Science & Technology
+          Dr. R. Shivakumar Foundation & SRM Institute of Science & Technology
           <br className="hidden sm:inline" />
-          <span className="font-sans text-sm tracking-wide text-cream/75 sm:text-base">
+          <span className="block mt-1 font-sans text-xs sm:text-sm tracking-wide text-cream/75 md:text-base">
             (Department of Food Technology & Institute of Hotel Management - Tiruchirappalli)
           </span>
         </motion.p>
@@ -123,19 +136,19 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: INTRO_DELAY + 0.7, duration: 0.8 }}
-          className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-3 font-mono text-xs text-cream/90 md:text-sm"
+          className="mt-6 sm:mt-8 flex flex-col sm:flex-row flex-wrap items-center justify-center gap-2.5 sm:gap-3 font-mono text-xs text-cream/90 max-w-2xl"
         >
-          <li className="flex items-center gap-2 rounded-full bg-cream/10 px-4 py-2 border border-cream/15">
-            <CalendarDays className="size-4 text-saffron" aria-hidden /> Selection: 14th & 15th Oct 2026
+          <li className="flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-cream/10 px-4 py-2 border border-cream/15 text-center">
+            <CalendarDays className="size-4 text-saffron shrink-0" aria-hidden /> Selection: 14th & 15th Oct 2026
           </li>
-          <li className="flex items-center gap-2 rounded-full bg-saffron/20 px-4 py-2 border border-saffron/40 text-saffron">
-            <CalendarDays className="size-4 text-saffron" aria-hidden /> Main Event: 26th Oct 2026
+          <li className="flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-saffron/20 px-4 py-2 border border-saffron/40 text-saffron font-medium text-center">
+            <CalendarDays className="size-4 text-saffron shrink-0" aria-hidden /> Main Event: 26th Oct 2026
           </li>
-          <li className="flex items-center gap-2 rounded-full bg-cream/10 px-4 py-2 border border-cream/15">
-            <MapPin className="size-4 text-saffron" aria-hidden /> SRMIST, Tiruchirappalli
+          <li className="flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-cream/10 px-4 py-2 border border-cream/15 text-center">
+            <MapPin className="size-4 text-saffron shrink-0" aria-hidden /> SRMIST, Tiruchirappalli
           </li>
-          <li className="flex items-center gap-2 rounded-full bg-cream/10 px-4 py-2 border border-cream/15">
-            <Timer className="size-4 text-saffron" aria-hidden /> Min 3 to Max 5 Members
+          <li className="flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-cream/10 px-4 py-2 border border-cream/15 text-center">
+            <Timer className="size-4 text-saffron shrink-0" aria-hidden /> Min 3 to Max 5 Members
           </li>
         </motion.ul>
 
@@ -143,16 +156,16 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: INTRO_DELAY + 0.85, duration: 0.8, ease: EASE }}
-          className="mt-10 flex flex-col items-center gap-4 sm:flex-row"
+          className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-sm sm:max-w-none"
         >
-          <Magnetic>
-            <a href={EVENT.registerHref} target="_blank" rel="noopener noreferrer" className={ctaClass}>
+          <Magnetic className="w-full sm:w-auto">
+            <a href={EVENT.registerHref} target="_blank" rel="noopener noreferrer" className={`${ctaClass} w-full justify-center`}>
               Register Team Now
               <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" aria-hidden />
             </a>
           </Magnetic>
-          <Magnetic>
-            <a href="#about" className={ghostClass}>
+          <Magnetic className="w-full sm:w-auto">
+            <a href="#about" className={`${ghostClass} w-full justify-center`}>
               Explore Event Details
             </a>
           </Magnetic>

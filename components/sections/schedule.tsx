@@ -11,10 +11,10 @@ export function Schedule() {
     <section id="schedule" data-theme="dark" aria-labelledby="schedule-title" className="py-28 text-cream md:py-36">
       <div className="mx-auto max-w-5xl px-6">
         <SectionLabel index="10" label={SCHEDULE.label} className="text-saffron" />
-        <RevealText id="schedule-title" text={SCHEDULE.title} className="mt-6 font-serif text-5xl leading-none md:text-7xl" />
+        <RevealText id="schedule-title" text={SCHEDULE.title} className="mt-6 font-serif text-3xl sm:text-5xl leading-none md:text-7xl" />
 
-        <Tabs defaultValue={SCHEDULE.days[0].id} className="mt-12">
-          <TabsList className="h-auto w-full flex-wrap justify-start gap-2 rounded-full bg-cream/[0.06] p-1.5 sm:w-auto">
+        <Tabs defaultValue={SCHEDULE.days[0].id} className="mt-10">
+          <TabsList className="h-auto w-full flex-wrap justify-start gap-2 rounded-2xl sm:rounded-full bg-cream/[0.06] p-1.5 sm:w-auto">
             {SCHEDULE.days.map((day) => (
               <TabsTrigger
                 key={day.id}

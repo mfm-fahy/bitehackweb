@@ -42,10 +42,10 @@ export function Fire() {
 
       <div className="relative mx-auto max-w-6xl px-6">
         <SectionLabel index="02" label={FOCUS_AREAS.label} className="text-saffron" />
-        <RevealText id="focus-title" text={FOCUS_AREAS.title} className="mt-6 max-w-3xl font-serif text-5xl leading-[1] md:text-7xl" />
-        <p className="mt-6 max-w-xl text-pretty text-lg text-cream/85">{FOCUS_AREAS.description}</p>
+        <RevealText id="focus-title" text={FOCUS_AREAS.title} className="mt-6 max-w-3xl font-serif text-3xl sm:text-5xl leading-[1] md:text-7xl" />
+        <p className="mt-4 max-w-xl text-pretty text-base sm:text-lg text-cream/85">{FOCUS_AREAS.description}</p>
 
-        <div className="mt-16 grid gap-6 md:grid-cols-3">
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
           {FOCUS_AREAS.tracks.map((track, i) => {
             const Icon = ICONS[i]
             return (
@@ -56,7 +56,7 @@ export function Fire() {
                 viewport={{ once: true, margin: '0px 0px -15% 0px' }}
                 transition={{ duration: 0.8, delay: i * 0.15, ease: [0.22, 1, 0.36, 1] }}
                 whileHover={{ y: -8 }}
-                className="group relative flex flex-col overflow-hidden rounded-3xl border border-cream/15 bg-char/75 p-8 backdrop-blur-md"
+                className="group relative flex flex-col overflow-hidden rounded-3xl border border-cream/15 bg-char/75 p-6 sm:p-8 backdrop-blur-md"
               >
                 <div className="flex items-center justify-between">
                   <span className="grid size-14 place-items-center rounded-2xl bg-saffron text-char transition-transform duration-500 group-hover:rotate-12">

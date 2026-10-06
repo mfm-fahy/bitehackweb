@@ -11,7 +11,7 @@ type Item = (typeof DOMAINS.items)[number]
 
 function DomainCard({ item, index }: { item: Item; index: number }) {
   return (
-    <motion.article className="group w-[80vw] shrink-0 snap-center sm:w-[280px] lg:w-[300px]">
+    <motion.article className="group w-[85vw] max-w-[320px] shrink-0 snap-center sm:w-[280px] lg:w-[300px]">
       <div className="relative flex h-[340px] sm:h-[350px] lg:h-[350px] flex-col justify-between overflow-hidden rounded-[1.8rem] border border-cream/15 bg-char shadow-2xl shadow-black/60 backdrop-blur-md transition-all duration-500 hover:border-saffron/80 hover:shadow-saffron/20">
         {/* Background Image */}
         {item.image && (

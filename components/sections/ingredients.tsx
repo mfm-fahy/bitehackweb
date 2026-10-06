@@ -19,7 +19,7 @@ function Statement({ text, index, total, progress }: { text: string; index: numb
   return (
     <motion.p
       style={{ opacity, y }}
-      className="col-start-1 row-start-1 text-balance font-serif text-3xl leading-[1.1] text-cream md:text-5xl lg:text-6xl"
+      className="col-start-1 row-start-1 relative z-20 text-balance font-serif text-2xl leading-tight text-cream sm:text-4xl md:text-5xl lg:text-6xl"
     >
       {text}
     </motion.p>

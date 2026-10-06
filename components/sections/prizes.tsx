@@ -43,16 +43,16 @@ export function Prizes() {
     <section id="prizes" data-theme="dark" aria-labelledby="prizes-title" className="relative py-28 text-cream md:py-36 bg-char/95">
       <div className="mx-auto max-w-6xl px-6">
         <SectionLabel index="09" label={PRIZES.label} className="text-saffron" />
-        <RevealText id="prizes-title" text={PRIZES.title} className="mt-6 font-serif text-5xl leading-none md:text-7xl" />
-        <p className="mt-4 max-w-xl text-cream/75 text-lg">{PRIZES.description}</p>
+        <RevealText id="prizes-title" text={PRIZES.title} className="mt-6 font-serif text-3xl sm:text-5xl leading-none md:text-7xl" />
+        <p className="mt-4 max-w-xl text-cream/75 text-base sm:text-lg">{PRIZES.description}</p>
 
-        <dl className="mt-14 grid grid-cols-2 gap-px overflow-hidden rounded-3xl border border-cream/10 bg-cream/10 md:grid-cols-4">
+        <dl className="mt-12 grid grid-cols-2 gap-px overflow-hidden rounded-3xl border border-cream/10 bg-cream/10 md:grid-cols-4">
           {PRIZES.stats.map((stat) => (
-            <div key={stat.label} className="bg-char p-6 md:p-8">
-              <dd className="font-serif text-4xl text-saffron md:text-5xl">
+            <div key={stat.label} className="bg-char p-4 sm:p-6 md:p-8">
+              <dd className="font-serif text-2xl sm:text-4xl md:text-5xl text-saffron font-bold">
                 <Counter value={stat.value} prefix={stat.prefix} suffix={stat.suffix} />
               </dd>
-              <dt className="mt-2 font-mono text-xs uppercase tracking-widest text-cream/65">{stat.label}</dt>
+              <dt className="mt-2 font-mono text-[10px] sm:text-xs uppercase tracking-widest text-cream/65">{stat.label}</dt>
             </div>
           ))}
         </dl>
