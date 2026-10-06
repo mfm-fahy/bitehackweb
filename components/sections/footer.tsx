@@ -86,7 +86,7 @@ export function Footer() {
         <p aria-hidden className="select-none text-center font-serif text-[14vw] font-bold italic leading-[0.8] text-saffron/90">
           {FOOTER.signoff}
         </p>
-        <p className="mt-6 text-center font-mono text-xs text-cream/50">{`© 2026 BITEHACK IDEA 2 PLATE. SRM Institute of Science & Technology & Dr. R. Shivakumar Foundation.`}</p>
+        <p className="mt-6 text-center font-mono text-xs text-cream/50">{`© 2026 BITEHACK IDEA 2 PLATE. SRM Institute of Science & Technology & Dr. R Shivakumar Foundation.`}</p>
       </div>
     </footer>
   )

@@ -55,8 +55,8 @@ export function Hero() {
           className="object-cover opacity-40 mix-blend-luminosity"
         />
       </motion.div>
-      {/* High-contrast dark overlay to ensure text is 100% crisp and readable */}
-      <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-char/90 via-char/80 to-char pointer-events-none" />
+      {/* High-contrast dark background overlay to ensure 100% crisp text readability */}
+      <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-char/95 via-char/85 to-char pointer-events-none" />
       <Steam />
 
       <FloatingFood src={IMAGES.tomato} progress={scrollYProgress} distance={120} className="left-[1%] top-[8%] size-14 sm:size-24 md:size-36 opacity-60 sm:opacity-90 pointer-events-none z-0" />
@@ -65,22 +65,22 @@ export function Hero() {
 
       <motion.div
         style={{ y: contentY, opacity: contentOpacity }}
-        className="relative mx-auto flex w-full max-w-7xl flex-col items-center px-4 pt-20 pb-10 sm:px-6 sm:pt-28 sm:pb-16 text-center z-10"
+        className="relative mx-auto flex w-full max-w-7xl flex-col items-center px-4 pt-16 pb-10 sm:px-6 sm:pt-28 sm:pb-16 text-center z-10"
       >
         {/* Presenters Tag */}
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: INTRO_DELAY - 0.2, duration: 0.6 }}
-          className="mb-3 rounded-full border border-saffron/50 bg-char/90 px-3.5 py-1 font-mono text-[10px] uppercase tracking-[0.15em] text-saffron backdrop-blur shadow-md sm:px-5 sm:py-2 sm:text-xs md:text-sm"
+          className="mb-3 rounded-full border border-saffron/50 bg-char/95 px-3.5 py-1 font-mono text-[10px] uppercase tracking-[0.15em] text-saffron backdrop-blur shadow-md sm:px-5 sm:py-2 sm:text-xs md:text-sm"
         >
           {EVENT.presenters}
         </motion.p>
 
-        {/* Main Title */}
-        <h1 id="hero-title" className="font-serif text-3xl sm:text-7xl md:text-8xl lg:text-[9rem] font-extrabold leading-[0.9] tracking-tight text-cream flex flex-wrap justify-center items-center gap-x-2.5 sm:gap-x-5 py-1 sm:py-2">
+        {/* Main Title with distinct spacing between BITEHACK and 2026 */}
+        <h1 id="hero-title" className="font-serif text-4xl sm:text-7xl md:text-8xl lg:text-[9rem] font-extrabold leading-none tracking-tight text-cream flex flex-wrap justify-center items-center py-1 sm:py-2">
           <span className="sr-only">{EVENT.name}</span>
-          <span aria-hidden className="flex overflow-hidden pb-[0.05em]">
+          <span aria-hidden className="flex overflow-hidden pb-[0.05em] mr-2.5 sm:mr-4">
             {'BITEHACK'.split('').map((char, i) => (
               <motion.span
                 key={`b-${i}`}
@@ -123,42 +123,42 @@ export function Hero() {
           <span className="hidden font-mono text-xs tracking-widest text-cream/90 md:inline">FROM IDEAS TO COMMERCIAL FOOD PRODUCTS</span>
         </motion.div>
 
-        {/* Host Institution Container - High Contrast Dark Glass Card */}
+        {/* Host Institution Container - Ultra High-Contrast Dark Glass Card */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: INTRO_DELAY + 0.55, duration: 0.8, ease: EASE }}
-          className="mt-3.5 sm:mt-5 max-w-2xl rounded-2xl border border-cream/15 bg-char/90 p-3 sm:p-5 shadow-2xl backdrop-blur-md"
+          className="mt-3 sm:mt-5 max-w-xl rounded-2xl border border-cream/20 bg-char/95 p-3.5 sm:p-5 shadow-2xl backdrop-blur-md"
         >
-          <p className="font-serif text-xs sm:text-lg md:text-xl font-semibold text-cream leading-snug">
+          <p className="font-serif text-sm sm:text-lg md:text-xl font-bold text-cream leading-snug">
             Dr. R. Shivakumar Foundation & SRM Institute of Science & Technology
           </p>
-          <p className="mt-1 font-sans text-[11px] sm:text-xs md:text-sm font-medium tracking-wide text-saffron">
+          <p className="mt-1 font-sans text-xs sm:text-sm font-semibold tracking-wide text-saffron">
             (Department of Food Technology & Institute of Hotel Management - Tiruchirappalli)
           </p>
         </motion.div>
 
-        {/* Event Details Info Pills - 2x2 Grid on Mobile for Compact Fit */}
+        {/* Event Details Info Pills - High Contrast 2x2 Grid on Mobile */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: INTRO_DELAY + 0.7, duration: 0.8 }}
-          className="mt-3.5 sm:mt-6 w-full max-w-2xl"
+          className="mt-3 sm:mt-5 w-full max-w-xl"
         >
-          <ul className="grid grid-cols-2 sm:flex sm:flex-row sm:flex-wrap items-center justify-center gap-2 sm:gap-3 font-mono text-[10px] sm:text-xs text-cream">
-            <li className="flex items-center justify-center gap-1.5 rounded-xl sm:rounded-full bg-char/90 px-2.5 py-2 sm:px-4 sm:py-2 border border-cream/20 text-cream font-medium shadow-md text-center">
+          <ul className="grid grid-cols-2 sm:flex sm:flex-row sm:flex-wrap items-center justify-center gap-2 sm:gap-3 font-mono text-[11px] sm:text-xs text-cream">
+            <li className="flex items-center justify-center gap-1.5 rounded-xl sm:rounded-full bg-char/95 px-3 py-2 sm:px-4 sm:py-2 border border-cream/20 text-cream font-semibold shadow-md text-center">
               <CalendarDays className="size-3.5 text-saffron shrink-0" aria-hidden />
               <span>Selection: Oct 14-15</span>
             </li>
-            <li className="flex items-center justify-center gap-1.5 rounded-xl sm:rounded-full bg-saffron text-char px-2.5 py-2 sm:px-4 sm:py-2 border border-saffron font-bold shadow-lg shadow-saffron/20 text-center">
+            <li className="flex items-center justify-center gap-1.5 rounded-xl sm:rounded-full bg-saffron text-char px-3 py-2 sm:px-4 sm:py-2 border border-saffron font-bold shadow-lg shadow-saffron/20 text-center">
               <CalendarDays className="size-3.5 text-char shrink-0" aria-hidden />
               <span>Main Event: Oct 26</span>
             </li>
-            <li className="flex items-center justify-center gap-1.5 rounded-xl sm:rounded-full bg-char/90 px-2.5 py-2 sm:px-4 sm:py-2 border border-cream/20 text-cream font-medium shadow-md text-center">
+            <li className="flex items-center justify-center gap-1.5 rounded-xl sm:rounded-full bg-char/95 px-3 py-2 sm:px-4 sm:py-2 border border-cream/20 text-cream font-semibold shadow-md text-center">
               <MapPin className="size-3.5 text-saffron shrink-0" aria-hidden />
               <span>SRMIST, Trichy</span>
             </li>
-            <li className="flex items-center justify-center gap-1.5 rounded-xl sm:rounded-full bg-char/90 px-2.5 py-2 sm:px-4 sm:py-2 border border-cream/20 text-cream font-medium shadow-md text-center">
+            <li className="flex items-center justify-center gap-1.5 rounded-xl sm:rounded-full bg-char/95 px-3 py-2 sm:px-4 sm:py-2 border border-cream/20 text-cream font-semibold shadow-md text-center">
               <Timer className="size-3.5 text-saffron shrink-0" aria-hidden />
               <span>3 to 5 Members</span>
             </li>
@@ -170,7 +170,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: INTRO_DELAY + 0.85, duration: 0.8, ease: EASE }}
-          className="mt-4 sm:mt-8 flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-4 w-full max-w-xs sm:max-w-none"
+          className="mt-4 sm:mt-7 flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-4 w-full max-w-xs sm:max-w-none"
         >
           <Magnetic className="w-full sm:w-auto">
             <a href={EVENT.registerHref} target="_blank" rel="noopener noreferrer" className={`${ctaClass} w-full justify-center shadow-xl shadow-saffron/20 text-sm sm:text-base py-3 sm:py-3.5`}>
@@ -186,9 +186,10 @@ export function Hero() {
         </motion.div>
       </motion.div>
 
+      {/* Desktop-only scroll indicator to avoid mobile overlap */}
       <a
         href="#ingredients"
-        className="absolute bottom-3 left-1/2 flex -translate-x-1/2 [@media(max-height:760px)]:hidden flex-col items-center gap-1 font-mono text-[10px] uppercase tracking-[0.3em] text-cream/70"
+        className="hidden lg:flex absolute bottom-4 left-1/2 -translate-x-1/2 flex-col items-center gap-1 font-mono text-[10px] uppercase tracking-[0.3em] text-cream/70 pointer-events-auto"
       >
         <svg
           aria-hidden

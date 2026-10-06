@@ -61,7 +61,7 @@ export const ABOUT = {
     'Identify a real food-related problem and propose an innovative solution.',
     'Build a basic prototype, formulation, or proof of concept.',
     'Present commercial potential, target audience, and costing to an expert judging panel.',
-    'Selected ideas can receive opportunities for funding, mentorship, product development support, and further commercialization from the Dr. R. Shivakumar Foundation.',
+    'Selected ideas can receive opportunities for funding, mentorship, product development support, and further commercialization from the Dr. R Shivakumar Foundation.',
   ],
 }
 
@@ -213,7 +213,7 @@ export const COORDINATORS = {
       role: 'Dean - Innovation',
       institution: 'Director - R Shivakumar Foundation',
       specialty: 'Innovation & Strategy',
-      bio: 'Leading strategic innovation and commercialization initiatives under the Dr. R. Shivakumar Foundation.',
+      bio: 'Leading strategic innovation and commercialization initiatives under the Dr. R Shivakumar Foundation.',
       image: IMAGES.chef1,
     },
     {
