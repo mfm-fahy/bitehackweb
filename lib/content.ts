@@ -237,12 +237,12 @@ export const COORDINATORS = {
   ],
   coCoordinators: [
     {
-      name: 'Mr. Gnanamoorthyeswaran',
+      name: 'Dr. Gnana Moorthy Eswaran',
       role: 'Assistant Professor',
       department: 'Food Tech, SOBT, SRMIST - Trichy',
     },
     {
-      name: 'Mr. V. Gunasekar',
+      name: 'Dr. V Gunasekar',
       role: 'Assistant Professor',
       department: 'Institute of Hotel Management, SRMIST - Trichy',
     },
